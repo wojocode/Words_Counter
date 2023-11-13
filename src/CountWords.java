@@ -29,6 +29,10 @@ public class CountWords {
                 }
             }
         }
+        return transformMapToStringList(map);
+    }
+
+    private static List<String> transformMapToStringList(Map<String, Integer> map) {
         List<String> wordsAndQty = new ArrayList<>();
         map.forEach((key, value) -> wordsAndQty.add(key + " " + value));
         return wordsAndQty;
